@@ -4,9 +4,10 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-	res.sendFile(__dirname + "/index.html");
-});
 
+	res.render('index', {});
+});
+app.use('/public', express.static('publick'));
 app.get('/news/', function(req, res) {
 	res.send('This is news');
 });

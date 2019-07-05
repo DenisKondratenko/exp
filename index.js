@@ -14,7 +14,8 @@ app.get('/news/', function(req, res) {
 
 
 app.get('/news/:id', function(req, res) {
-	res.render('news', {newsId: req.params.id});
+	var obj ={title: "Новость", id:4};
+	res.render('news', {newsId: req.params.id, obj: obj});
 });
 app.listen(3000);
 
